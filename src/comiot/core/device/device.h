@@ -24,6 +24,16 @@ public:
 	int getValue();
 	void setValue(int newValue);
 
+	bool valueChange(int newValue);
+	void stateChange(eDeviceStates newState);
+	bool refreshState();
+
+	bool reset();
+	bool on();
+	bool off();
+	bool up();
+	bool down();
+
 private:
 	int placeID;
 	int deviceID;
