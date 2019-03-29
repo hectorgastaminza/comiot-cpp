@@ -19,34 +19,34 @@ device::device() {
 device::~device() {
 }
 
-int device::getPlaceID(){
+const int & device::getPlaceID(){
 	return placeID;
 }
-void device::setPlaceID(int newID){
+void device::setPlaceID(const int & newID){
 	placeID = newID;
 }
 
-int device::getDeviceID(){
+const int & device::getDeviceID(){
 	return deviceID;
 }
-void device::setDeviceID(int newID){
+void device::setDeviceID(const int & newID){
 	deviceID = newID;
 }
 
-int device::getValue(){
+const int & device::getValue(){
 	return value;
 }
-void device::setValue(int newValue){
+void device::setValue(const int & newValue){
 	value = newValue;
 }
 
-bool device::valueChange(int newValue) {
+bool device::valueChange(const int & newValue) {
 	value = newValue;
 	stateChange(ON_VALUE);
 	return true;
 }
 
-void device::stateChange(eDeviceStates newState) {
+void device::stateChange(const eDeviceStates & newState) {
 	state = newState;
 
 	/*

@@ -17,15 +17,15 @@ public:
 	device();
 	virtual ~device();
 
-	int getPlaceID();
-	void setPlaceID(int newID);
-	int getDeviceID();
-	void setDeviceID(int newID);
-	int getValue();
-	void setValue(int newValue);
+	const int & getPlaceID();
+	void setPlaceID(const int & newID);
+	const int & getDeviceID();
+	void setDeviceID(const int & newID);
+	const int & getValue();
+	void setValue(const int & newValue);
 
-	bool valueChange(int newValue);
-	void stateChange(eDeviceStates newState);
+	bool valueChange(const int & newValue);
+	void stateChange(const eDeviceStates & newState);
 	bool refreshState();
 
 	bool reset();
